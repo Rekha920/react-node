@@ -1,6 +1,12 @@
+const {User}=require('../model/User');
 
-const getUsers=(req,res)=>{
+const  getUsers=(req,res)=>{
+    
 res.json("Hello Rekha Dodani..!")
 }
 
-module.exports=getUsers;
+const createUser=async(req,res)=>{
+    console.log(req.body)
+}
+
+module.exports={getUsers,createUser};
