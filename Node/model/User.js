@@ -51,12 +51,8 @@ userModel.statics.findByCredentials=async(email,password)=>{
     {throw new Error('Unable to Login.!');}
     const token= jwt.sign({id:user._id,email:user.email,name:user.firstName}, process.env.SECRET, { expiresIn: '1h' });
     return {user,token};
-
 }
 
-userModel.statics.generateAuthToken=async ()=>{
-   
-}
 
 const User=mongoose.model('User',userModel);
 module.exports=User;
