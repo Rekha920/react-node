@@ -6,7 +6,8 @@ const Schema=mongoose.Schema;
 const userModel=new Schema({
     firstName:{
         type:String,
-        required:true
+        required:true,
+        trim:true
     },
     lastName:{
         type:String,
@@ -14,7 +15,9 @@ const userModel=new Schema({
     },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique:true,
+        trim:true
     },
     contactNumber:{
         type:String,

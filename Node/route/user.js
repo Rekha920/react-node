@@ -1,6 +1,6 @@
 const express=require('express');
 const {check,validateResult}=require('express-validator');
-const {getUsers,createUser,loginUser} =require('../controller/user');
+const {getUsers,createUser,loginUser,resetPasswordRequest,resetPassword} =require('../controller/user');
 const router=express.Router();
 
 router.get("/users",getUsers);
@@ -19,4 +19,8 @@ router.post("/login",
     check('email').isEmail(),
     check('password')
 ],loginUser)
+
+
+router.post("/resetRequestPassword",resetPasswordRequest)
+router.post("/resetPassword/:token/:userId",resetPassword)
 module.exports=router
