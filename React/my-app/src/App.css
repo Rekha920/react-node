@@ -40,3 +40,11 @@
 .color-navv{
   background-color: #e98d8d;
 }
+
+.cardBox{
+  display: flex;
+}
+
+.cardDeck{
+   margin:0 15px 15px 15px
+}
